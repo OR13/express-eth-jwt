@@ -1,8 +1,8 @@
 # JWT Tutorial
 
-auth - http://localhost:9000
-proxy - http://localhost:9001
-server - http://localhost:9002
+- auth - http://localhost:9000
+- proxy - http://localhost:9001
+- server - http://localhost:9002
 
 ### `npm run clean`
 
