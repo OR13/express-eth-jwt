@@ -6,8 +6,9 @@
   "scripts": {
     "clean": "rm -rf .cert",
     "setup": "node ./scripts/setup.js",
-    "start:server": "node ./src/server/server.js",
+    "start:auth": "node ./src/auth/auth.js",
     "start:proxy": "node ./src/proxy/proxy.js",
+    "start:server": "node ./src/server/server.js",
     "start:client": "node ./src/client/client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +23,7 @@
     "jwk-to-pem": "^1.2.6",
     "moment": "^2.20.1",
     "node-fetch": "^2.0.0",
-    "node-jose": "^0.11.0"
+    "node-jose": "^0.11.0",
+    "web3": "^1.0.0-beta.29"
   }
 }
