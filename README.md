@@ -26,10 +26,10 @@ Starts a test api server at `http://localhost:9002`.
 
 ### `npm run start:client`
 
-Client generates a new ethereum address and privateKey, creates a jwt1.
-jwt1 is used to request jwt2 from `auth`.
-jwt2 is used it access `proxy`.
-`proxy` restricts access to `server` to only token bearers.
+- client generates a new ethereum address and privateKey, creates claims and signs them creating jwt1.
+- jwt1 is used to request jwt2 from `auth`. 
+- jwt2 is used it restrict access to `proxy`.
+- `proxy` restricts access to `server` to only token bearers.
 
 #### Reading
 
