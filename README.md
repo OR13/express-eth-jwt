@@ -9,9 +9,14 @@ Users generate and sign a jwt with an ethereum private key, and use this first j
 - server - http://localhost:9002
 
 ```
+npm install -g ganache-cli
 git clone https://github.com/OR13/express-eth-jwt.git
 npm install
 ```
+
+### `ganache-cli`
+
+Starts a test ethereum interface that is used for development.
 
 ### `npm run clean`
 
