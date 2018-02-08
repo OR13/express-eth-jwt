@@ -1,8 +1,17 @@
 # JWT Tutorial
 
+_This is a proof of concept, unaudited, not be trusted... use at your own risk._
+
+Users generate and sign a jwt with an ethereum private key, and use this first jwt to request a second jwt from the auth service. The second jwt is then used to access resources that are protected by an http proxy, such as IPFS.
+
 - auth - http://localhost:9000
 - proxy - http://localhost:9001
 - server - http://localhost:9002
+
+```
+git clone https://github.com/OR13/express-eth-jwt.git
+npm install
+```
 
 ### `npm run clean`
 
