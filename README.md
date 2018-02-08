@@ -42,7 +42,7 @@ Starts a test api server at `http://localhost:9002`.
 
 - client generates a new ethereum address and privateKey, creates claims and signs them creating jwt1.
 - jwt1 is used to request jwt2 from `auth`. 
-- jwt2 is used it restrict access to `proxy`.
+- jwt2 is used to restrict access to `proxy`.
 - `proxy` restricts access to `server` to only token bearers.
 
 #### Reading
