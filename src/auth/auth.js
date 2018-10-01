@@ -29,7 +29,9 @@ app.post("/token", async (req, res) => {
     web3,
     req.body.jwt
   );
-  console.log(recoveredAddress, claims);
+
+  // console.log(recoveredAddress, claims);
+
   const raw = {
     iss: "localhost:9000",
     exp: moment()
@@ -45,6 +47,9 @@ app.post("/token", async (req, res) => {
   const sigKey = keystore.all({ use: "sig" })[0];
   const encKey = keystore.all({ use: "enc" })[0];
   let token = await create(raw, sigKey, encKey);
+
+  console.log("token: ", token);
+
   res.json({
     token
   });
