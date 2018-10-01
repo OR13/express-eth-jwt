@@ -3,9 +3,6 @@ const bodyParser = require("body-parser");
 const app = express();
 require("express-async-await")(app);
 
-// intialized when app starts
-let keystore;
-
 app.use(bodyParser.json());
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

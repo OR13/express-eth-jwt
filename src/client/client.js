@@ -1,9 +1,8 @@
 const fetch = require("node-fetch");
 
 const Web3 = require("web3");
-const { util } = require("node-jose");
 
-const { createTransmuteAddressJwt } = require("../jwt-utils");
+const { createor13AddressJwt } = require("../jwt-utils");
 const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 const TOKEN_URL = "http://localhost:9000/token";
@@ -23,7 +22,7 @@ const PROTECTED_RESOURCE_URL = "http://localhost:9001";
 
   const { address, privateKey } = await web3.eth.accounts.create();
 
-  const jwt = await createTransmuteAddressJwt(web3, address, privateKey);
+  const jwt = await createor13AddressJwt(web3, address, privateKey);
 
   let body = {
     jwt

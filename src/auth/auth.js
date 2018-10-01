@@ -1,4 +1,4 @@
-const { JWE, JWK, JWS } = require("node-jose");
+const { JWK } = require("node-jose");
 const fs = require("fs");
 const { resolve } = require("path");
 const express = require("express");
@@ -24,15 +24,12 @@ app.use((req, res, next) => {
 });
 
 app.post("/token", async (req, res) => {
-  
   // will throw for expires or invalid JWTs...
   const { recoveredAddress, claims } = await decodeEthBlockHashJwt(
     web3,
     req.body.jwt
   );
-
-  // console.log(recoveredAddress, claims);
-
+  console.log(recoveredAddress, claims);
   const raw = {
     iss: "localhost:9000",
     exp: moment()

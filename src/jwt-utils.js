@@ -33,7 +33,7 @@ module.exports.verify = async (encodedEncryptedToken, sigKey, encKey) => {
   const plaintextToken = decryptedToken.plaintext.toString();
 
   // Verify Token
-  const v = await JWS.createVerify(sigKey).verify(plaintextToken);
+  // const v = await JWS.createVerify(sigKey).verify(plaintextToken);
   // console.log("Verify Token");
   // console.log(v.header);
   // console.log(v.payload.toString());
@@ -42,12 +42,7 @@ module.exports.verify = async (encodedEncryptedToken, sigKey, encKey) => {
   const publicKey = jwkToPem(sigKey.toJSON());
   // const privateKey = jwkToPem(sigKey.toJSON(true), { private: true });
 
-  // console.log("public", publicKey);
-  // console.log("private", privateKey);
-
   const decoded = jwt.verify(plaintextToken, publicKey);
-  // console.log("decoded...", decoded);
-
   return decoded;
 };
 
@@ -79,7 +74,7 @@ module.exports.decodeEthBlockHashJwt = async (web3, jwt) => {
   };
 };
 
-module.exports.createTransmuteAddressJwt = async (
+module.exports.createor13AddressJwt = async (
   web3,
   address,
   privateKey
@@ -107,7 +102,7 @@ module.exports.createTransmuteAddressJwt = async (
   };
   const headerString = JSON.stringify({
     typ: "jwt",
-    alg: "TransmuteSignedBlockHash"
+    alg: "OR13SignedBlockHash"
   });
   const payloadString = JSON.stringify(raw);
   const payloadSigString = JSON.stringify(

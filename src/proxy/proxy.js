@@ -1,11 +1,9 @@
-const { JWE, JWK, JWS } = require("node-jose");
+const { JWK } = require("node-jose");
 const fs = require("fs");
 const http = require("http");
 const { resolve } = require("path");
 const httpProxy = require("http-proxy");
 const querystring = require("querystring");
-const Web3 = require("web3");
-const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 const { verify } = require("../jwt-utils");
 
 // intialized when app starts
