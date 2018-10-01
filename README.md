@@ -1,4 +1,4 @@
-# JWT Tutorial
+# Express Ethereum JWT Tutorial
 
 [![Build Status](https://travis-ci.org/OR13/express-eth-jwt.svg?branch=master)](https://travis-ci.org/OR13/express-eth-jwt)
 
@@ -15,6 +15,8 @@ npm install -g ganache-cli
 git clone https://github.com/OR13/express-eth-jwt.git
 npm install
 ```
+
+## Getting Started
 
 ### `ganache-cli`
 
