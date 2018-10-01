@@ -1,5 +1,7 @@
 # JWT Tutorial
 
+[![Build Status](https://travis-ci.org/OR13/express-eth-jwt.svg?branch=master)](https://travis-ci.org/OR13/express-eth-jwt)
+
 _This is a proof of concept, unaudited, not be trusted... use at your own risk._
 
 Users generate and sign a jwt with an ethereum private key, and use this first jwt to request a second jwt from the auth service. The second jwt is then used to access resources that are protected by an http proxy, such as IPFS.
