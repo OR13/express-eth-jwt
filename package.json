@@ -24,6 +24,7 @@
     "moment": "^2.20.1",
     "node-fetch": "^2.0.0",
     "node-jose": "^0.11.0",
-    "web3": "^1.0.0-beta.29"
+    "web3": "^1.0.0-beta.29",
+    "websocket": "^1.0.28"
   }
 }
